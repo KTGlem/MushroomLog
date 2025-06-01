@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mushroom Log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mushroom Log</h1>
+
+    <!-- Batch List View -->
+    <div id="batchList"></div>
+
+    <!-- Detail View -->
+    <div id="detailView" class="hidden">
+      <button onclick="backToList()" class="back-btn">← Back</button>
+      <h2>Batch: <span id="detailBatchID"></span></h2>
+      <p><strong>Type:</strong> <span id="detailType"></span></p>
+      <p><strong>Date Bag Cut:</strong> <span id="detailDateCut"></span></p>
+      <p><strong>Flush 1:</strong> <span id="detailFlush1"></span></p>
+      <p><strong>Flush 2:</strong> <span id="detailFlush2"></span></p>
+      <p><strong>Flush 3:</strong> <span id="detailFlush3"></span></p>
+      <p><strong>Notes:</strong> <span id="detailNotes"></span></p>
+      <p><strong>Status:</strong> <span id="detailComplete"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
