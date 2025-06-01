@@ -1,5 +1,4 @@
-
-const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQDaj-NudCmuJlOub-SyUs9KSFap7kw7YulE1guALEkEwpxuChaHh5dGF7pBGlAuQf76waLTK6cFgFj/pub?gid=252872015&single=true&output=csv'; // Google Sheet published CSV URL
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQDaj-NudCmuJlOub-SyUs9KSFap7kw7YulE1guALEkEwpxuChaHh5dGF7pBGlAuQf76waLTK6cFgFj/pub?gid=252872015&single=true&output=csv';
 
 let batches = [];
 let selectedBatch = null;
@@ -30,7 +29,10 @@ function renderBatchList() {
   batches.forEach((batch, index) => {
     const div = document.createElement('div');
     div.className = 'batch';
-    div.innerHTML = `  <strong>${task["Batch ID"]}</strong> - ${task["Mushroom Type"]} <br>  <small>Date Bag Cut: ${task["Date Bag Cut"]}</small>`;
+    div.innerHTML = `
+      <strong>${batch["Batch ID"]}</strong> - ${batch["Mushroom Type"]} (${batch["Auto Status"]})<br>
+      <small>📅 Date Bag Cut: ${batch["Date Bag Cut"]}</small>
+    `;
     div.onclick = () => showDetail(index);
     list.appendChild(div);
   });
