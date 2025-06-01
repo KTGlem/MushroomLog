@@ -6,7 +6,7 @@ let selectedBatch = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const response = await fetch(SHEET_CSV_URL);
+    const response = await fetch(SHEET_URL);
     const csvText = await response.text();
     batches = parseCSV(csvText);
     renderBatchList();
