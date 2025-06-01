@@ -1,5 +1,5 @@
 
-const SHEET_API_URL = "YOUR_SHEETBEST_API_URL"; // Replace this with your actual Sheet.best endpoint
+const SHEET_API_URL = "https://api.sheetbest.com/sheets/1c8787ca-bc39-458a-9a7d-e71ae164779f"; // Sheet.best endpoint
 
 let sheetData = [];
 let selectedIndex = null;
