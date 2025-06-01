@@ -11,12 +11,14 @@
     <h1>Mushroom Log</h1>
 
     <!-- Batch List View -->
-    <div id="batchList"></div>
+    <div id="batchList">
+      <p>Loading batches...</p>
+    </div>
 
     <!-- Detail View -->
     <div id="detailView" class="hidden">
-      <button onclick="backToList()" class="back-btn">← Back</button>
-      <h2>Batch: <span id="detailBatchID"></span></h2>
+      <h2>Batch Details</h2>
+      <p><strong>Batch ID:</strong> <span id="detailBatchID"></span></p>
       <p><strong>Type:</strong> <span id="detailType"></span></p>
       <p><strong>Date Bag Cut:</strong> <span id="detailDateCut"></span></p>
       <p><strong>Flush 1:</strong> <span id="detailFlush1"></span></p>
@@ -24,6 +26,7 @@
       <p><strong>Flush 3:</strong> <span id="detailFlush3"></span></p>
       <p><strong>Notes:</strong> <span id="detailNotes"></span></p>
       <p><strong>Status:</strong> <span id="detailComplete"></span></p>
+      <button onclick="backToList()">⬅ Back to List</button>
     </div>
   </div>
 
