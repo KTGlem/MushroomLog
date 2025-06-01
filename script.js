@@ -1,11 +1,11 @@
 
-const SHEET_API_URL = "https://api.sheetbest.com/sheets/1c8787ca-bc39-458a-9a7d-e71ae164779f"; // Sheet.best endpoint
+const SHEET_URL = 'https://api.sheetbest.com/sheets/1c8787ca-bc39-458a-9a7d-e71ae164779f'; // Sheet.best URL
 
 let sheetData = [];
 let selectedIndex = null;
 
 function fetchData() {
-  fetch(SHEET_API_URL)
+  fetch(SHEET_URL)
     .then((res) => res.json())
     .then((data) => {
       sheetData = data;
@@ -63,7 +63,7 @@ function submitUpdate() {
 
   const batchId = sheetData[selectedIndex]["Batch ID"];
 
-  fetch(`${SHEET_API_URL}/Batch ID/${encodeURIComponent(batchId)}`, {
+  fetch(`${SHEET_URL}/Batch ID/${encodeURIComponent(batchId)}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updateData),
