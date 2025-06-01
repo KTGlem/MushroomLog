@@ -30,9 +30,11 @@ function renderBatchList() {
     const div = document.createElement('div');
     div.className = 'batch';
     div.innerHTML = `
-      <strong>${batch["Batch ID"]}</strong> - ${batch["Mushroom Type"]} (${batch["Auto Status"]})<br>
-      <small>Date Bag Cut: ${batch["Date Bag Cut"]}</small>
+      <strong>${batch["Batch ID"]}</strong>: ${batch["Mushroom Type"]} (${batch["Auto Status"]})
+      <br><small>📅 Date Bag Cut: ${batch["Date Bag Cut"]}</small>
+      <br><small>🌱 Projected Next Harvest: ${batch["Projected Next Harvest"]}</small>
     `;
+
     div.onclick = () => showDetail(index);
     list.appendChild(div);
   });
